@@ -74,8 +74,8 @@ body:
   validations:
     required: false
 - id: mention_team
-   type: input
-   attributes:
+  type: input
+  attributes:
     label: Mention team
     description: Only to mention an other team
     value: "@la-test/sbx"
