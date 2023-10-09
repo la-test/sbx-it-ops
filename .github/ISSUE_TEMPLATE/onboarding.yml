@@ -5,69 +5,81 @@ labels: ["access"]
 assignees:
   - la-test/sbx
 body:
-  - type: markdown
+  - id: title
+    type: markdown
     attributes:
-      value: "### For any team member"
-  - type: input
-    id: name
+      value: "### Fill the field above with a proper title"
+  - id: common
+    type: markdown
+    attributes:
+      value: "### Fill the following fields for any team member"
+  - id: name
+    type: input
     attributes:
       label: First name and surname or alias
-      placeholder: ex. John Doe
+      placeholder: John Doe
     validations:
       required: true
-  - type: input
-    id: favorite_username
+  - id: favorite_username
+    type: input
     attributes:
       label: Favorite username
       description: To be used when possible
-      placeholder: ex. jdoe
+      placeholder: jdoe
     validations:
       required: false
-  - type: input
-    id: github_username
+  - id: github_username
+    type: input
     attributes:
       label: Existing Github username
       description: To access the relevant repositories
-      placeholder: ex. johndoe123
+      placeholder: johndoe123
     validations:
       required: true
-  - type: input
-    id: email
+  - id: email
+    type: input
     attributes:
       label: Least Authority email address
-      placeholder: ex. john@leastauthority.com
+      placeholder: john@leastauthority.com
     validations:
       required: true
-  - type: input
-    id: ps_email
+  - id: ps_email
+    type: input
     attributes:
       label: Private Storage email address
       description: Only for Private Storage team members
-      placeholder: ex. john@private.storage
+      placeholder: john@private.storage
     validations:
       required: false
-  - type: markdown
+  - id: devops
+    type: markdown
     attributes:
-      value: "### Only for Dev/Ops team member"
-  - type: textarea
-    id: ssh_key
+      value: "### Fill the following fields only for Dev/Ops team member"
+  - id: ssh_key
+    type: textarea
     attributes:
       label: SSH public key
       description: To access the systems
-      placeholder:
-      value: |
+      placeholder: |
         ssh-rsa/ed25519/... ... john@leastauthority.com
     validations:
       required: false
-  - type: textarea
-    id: gpg_key
+  - id: gpg_key
+    type: textarea
     attributes:
       label: GPG public key
       description: To decrypt the secrets
-      placeholder: 
-      value: |
+      placeholder: |
         -----BEGIN PGP PUBLIC KEY BLOCK-----
         ...
         -----END PGP PUBLIC KEY BLOCK-----
     validations:
       required: false
+   - id: mention_team
+     type: input
+     attributes:
+      label: Mention team
+      description: Only to mention an other team
+      value: @la-test/sbx
+    validations:
+      required: true
