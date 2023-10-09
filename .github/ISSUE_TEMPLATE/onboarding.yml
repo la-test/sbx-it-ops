@@ -7,9 +7,7 @@ body:
   type: markdown
   attributes:
     value: |
-      ## Fill the field above with a proper title
-      
-      ## Fill the following fields for any team member"
+      ## Give it a proper title :arrow_up_small:, then fill the fields :arrow_down_small:
 - id: name
   type: input
   attributes:
@@ -17,10 +15,10 @@ body:
     placeholder: John Doe
   validations:
     required: true
-- id: favorite_username
+- id: prefered_username
   type: input
   attributes:
-    label: Favorite username
+    label: Prefered username
     description: To be used when possible
     placeholder: jdoe
   validations:
@@ -76,7 +74,7 @@ body:
   type: input
   attributes:
     label: Mention team
-    description: Only to mention an other team
+    description: Change only to mention an other team
     value: "@la-test/sbx"
   validations:
     required: true
