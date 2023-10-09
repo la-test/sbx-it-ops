@@ -1,6 +1,6 @@
 ---
-name: Onboarding or Offboarding
-about: Request support for the onboarding or offboarding of a team member
+name: Onboarding or Offboarding - Text
+about: Request support for the onboarding or offboarding of a team member (using plain text)
 title: '[Onboarding or Offboarding]: <... as ... member>'
 labels: 'access'
 assignees: 'la-test/sbx'

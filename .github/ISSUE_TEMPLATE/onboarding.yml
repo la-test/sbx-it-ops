@@ -1,0 +1,66 @@
+name: "Onboarding or Offboarding - Form"
+description: "Request support for the onboarding or offboarding of a team member (using a form)"
+title: "[Onboarding or Offboarding]: <... as ... member>"
+labels: ["access"]
+assignees:
+  - la-test/sbx
+body:
+  - type: markdown
+    attributes:
+      value: |
+        IT-Ops team will need some informations to start the onboarding or offboarding -->
+  - type: input
+    id: name
+    attributes:
+      label: First name and surname (or alias?)
+      placeholder: ex. John Doe
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Least Authority email address
+      placeholder: ex. john@leastauthority.com
+    validations:
+      required: true
+  - type: input
+    id: ps_email
+    attributes:
+      label: Private Storage email address
+      placeholder: ex. john@private.storage
+    validations:
+      required: false
+  - type: input
+    id: avorite_username
+    attributes:
+      label: Favorite username
+      description: To be used when possible
+      placeholder: ex. jdoe
+    validations:
+      required: false
+  - type: input
+    id: github_username
+    attributes:
+      label: Github username to access our repositories
+      description: To be invited to the relevant repositories
+      placeholder: ex. johndoe123
+    validations:
+      required: true
+  - type: textarea
+    id: ssh_key
+    attributes:
+      label: SSH public key
+      description: To access the systems
+      placeholder: 
+      value: ""
+    validations:
+      required: false
+  - type: textarea
+    id: gpg_key
+    attributes:
+      label: GPG public key
+      description: To decrypt the secrets
+      placeholder: 
+      value: ""
+    validations:
+      required: false
