@@ -2,11 +2,9 @@ name: "Onboarding or Offboarding - Form"
 description: "Request support for the onboarding or offboarding of a team member (using a form)"
 title: "[Onboarding or Offboarding]: <... as ... member>"
 labels: ["access"]
-assignees:
-  - la-test/sbx
 body:
-  - id: title
-    type: markdown
+  - type: markdown
+    id: title
     attributes:
       value: "### Fill the field above with a proper title"
   - id: common
@@ -80,6 +78,6 @@ body:
      attributes:
       label: Mention team
       description: Only to mention an other team
-      value: @la-test/sbx
+      value: "@la-test/sbx"
     validations:
       required: true
