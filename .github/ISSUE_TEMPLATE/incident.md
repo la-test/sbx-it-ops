@@ -1,5 +1,5 @@
 ---
-name: Incident Report
+name: Incident report
 about: Report an incident with potential or lasting impact on a product or service
 title: '[Incident]: <... is unavailable since ...>'
 labels: incident
