@@ -7,12 +7,28 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: "For any team member"
+      value: "### For any team member"
   - type: input
     id: name
     attributes:
       label: First name and surname or alias
       placeholder: ex. John Doe
+    validations:
+      required: true
+  - type: input
+    id: favorite_username
+    attributes:
+      label: Favorite username
+      description: To be used when possible
+      placeholder: ex. jdoe
+    validations:
+      required: false
+  - type: input
+    id: github_username
+    attributes:
+      label: Existing Github username
+      description: To access the relevant repositories
+      placeholder: ex. johndoe123
     validations:
       required: true
   - type: input
@@ -30,25 +46,9 @@ body:
       placeholder: ex. john@private.storage
     validations:
       required: false
-  - type: input
-    id: avorite_username
-    attributes:
-      label: Favorite username
-      description: To be used when possible
-      placeholder: ex. jdoe
-    validations:
-      required: false
-  - type: input
-    id: github_username
-    attributes:
-      label: Existing Github username
-      description: To access the relevant repositories
-      placeholder: ex. johndoe123
-    validations:
-      required: true
   - type: markdown
     attributes:
-      value: "Only for Dev/Ops team member"
+      value: "### Only for Dev/Ops team member"
   - type: textarea
     id: ssh_key
     attributes:
@@ -56,7 +56,7 @@ body:
       description: To access the systems
       placeholder:
       value: |
-        ssh-rsa/ed25519/... ... <name>@leastauthority.com
+        ssh-rsa/ed25519/... ... john@leastauthority.com
     validations:
       required: false
   - type: textarea
