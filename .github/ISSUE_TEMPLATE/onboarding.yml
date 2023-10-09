@@ -3,14 +3,13 @@ description: "Request support for the onboarding or offboarding of a team member
 title: "[Onboarding or Offboarding]: <... as ... member>"
 labels: ["access"]
 body:
-- id: above
-  type: markdown
-  attributes:
-    value: "### Fill the field above with a proper title"
 - id: common
   type: markdown
   attributes:
-    value: "### Fill the following fields for any team member"
+    value: |
+      ## Fill the field above with a proper title
+      
+      ## Fill the following fields for any team member"
 - id: name
   type: input
   attributes:
@@ -52,7 +51,7 @@ body:
 - id: devops
   type: markdown
   attributes:
-    value: "### Fill the following fields only for Dev/Ops team member"
+    value: "## Fill the following fields only for Dev/Ops team member"
 - id: ssh_key
   type: textarea
   attributes:
