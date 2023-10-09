@@ -19,7 +19,7 @@ assignees: 'la-test/sbx'
 | Least Authority email address | yes | <name>@leastauthority.com |
 | Private Storage email address | if relevant | <name>@private.storage |
 
-### Only for IT-Ops team member
+### Only for Dev/Ops team member
 
 * SSH public key to access the systems:
   ```

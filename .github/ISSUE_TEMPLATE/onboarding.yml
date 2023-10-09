@@ -7,12 +7,11 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: |
-        IT-Ops team will need some informations to start the onboarding or offboarding -->
+      value: "For any team member"
   - type: input
     id: name
     attributes:
-      label: First name and surname (or alias?)
+      label: First name and surname or alias
       placeholder: ex. John Doe
     validations:
       required: true
@@ -27,6 +26,7 @@ body:
     id: ps_email
     attributes:
       label: Private Storage email address
+      description: Only for Private Storage team members
       placeholder: ex. john@private.storage
     validations:
       required: false
@@ -41,18 +41,22 @@ body:
   - type: input
     id: github_username
     attributes:
-      label: Github username to access our repositories
-      description: To be invited to the relevant repositories
+      label: Existing Github username
+      description: To access the relevant repositories
       placeholder: ex. johndoe123
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: "Only for Dev/Ops team member"
   - type: textarea
     id: ssh_key
     attributes:
       label: SSH public key
       description: To access the systems
-      placeholder: 
-      value: ""
+      placeholder:
+      value: |
+        ssh-rsa/ed25519/... ... <name>@leastauthority.com
     validations:
       required: false
   - type: textarea
@@ -61,6 +65,9 @@ body:
       label: GPG public key
       description: To decrypt the secrets
       placeholder: 
-      value: ""
+      value: |
+        -----BEGIN PGP PUBLIC KEY BLOCK-----
+        ...
+        -----END PGP PUBLIC KEY BLOCK-----
     validations:
       required: false
