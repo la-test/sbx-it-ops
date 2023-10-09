@@ -4,7 +4,7 @@ title: "[Onboarding or Offboarding]: <... as ... member>"
 labels: ["access"]
 body:
   - type: markdown
-    id: title
+    id: above
     attributes:
       value: "### Fill the field above with a proper title"
   - id: common
