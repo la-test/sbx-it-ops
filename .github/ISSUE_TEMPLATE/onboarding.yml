@@ -2,72 +2,80 @@ name: "Onboarding or Offboarding - Form"
 description: "Request support for the onboarding or offboarding of a team member (using a form)"
 title: "[Onboarding or Offboarding]: <... as ... member>"
 labels: ["access"]
-assignees:
-  - la-test/sbx
 body:
-  - type: markdown
-    attributes:
-      value: "### For any team member"
-  - type: input
-    id: name
-    attributes:
-      label: First name and surname or alias
-      placeholder: ex. John Doe
-    validations:
-      required: true
-  - type: input
-    id: favorite_username
-    attributes:
-      label: Favorite username
-      description: To be used when possible
-      placeholder: ex. jdoe
-    validations:
-      required: false
-  - type: input
-    id: github_username
-    attributes:
-      label: Existing Github username
-      description: To access the relevant repositories
-      placeholder: ex. johndoe123
-    validations:
-      required: true
-  - type: input
-    id: email
-    attributes:
-      label: Least Authority email address
-      placeholder: ex. john@leastauthority.com
-    validations:
-      required: true
-  - type: input
-    id: ps_email
-    attributes:
-      label: Private Storage email address
-      description: Only for Private Storage team members
-      placeholder: ex. john@private.storage
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: "### Only for Dev/Ops team member"
-  - type: textarea
-    id: ssh_key
-    attributes:
-      label: SSH public key
-      description: To access the systems
-      placeholder:
-      value: |
-        ssh-rsa/ed25519/... ... john@leastauthority.com
-    validations:
-      required: false
-  - type: textarea
-    id: gpg_key
-    attributes:
-      label: GPG public key
-      description: To decrypt the secrets
-      placeholder: 
-      value: |
-        -----BEGIN PGP PUBLIC KEY BLOCK-----
-        ...
-        -----END PGP PUBLIC KEY BLOCK-----
-    validations:
-      required: false
+- id: common
+  type: markdown
+  attributes:
+    value: |
+      ## Give a proper title above :arrow_up_small:
+      ## Fill the following fields :arrow_down_small:
+- id: name
+  type: input
+  attributes:
+    label: First name and surname or alias
+    placeholder: John Doe
+  validations:
+    required: true
+- id: prefered_username
+  type: input
+  attributes:
+    label: Prefered username
+    description: To be used when possible
+    placeholder: jdoe
+  validations:
+    required: false
+- id: github_username
+  type: input
+  attributes:
+    label: Existing Github username
+    description: To access the relevant repositories
+    placeholder: johndoe123
+  validations:
+    required: true
+- id: email
+  type: input
+  attributes:
+    label: Least Authority email address
+    placeholder: john@leastauthority.com
+  validations:
+    required: true
+- id: ps_email
+  type: input
+  attributes:
+    label: Private Storage email address
+    description: Only for Private Storage team members
+    placeholder: john@private.storage
+  validations:
+    required: false
+- id: devops
+  type: markdown
+  attributes:
+    value: "## Fill the following fields only for Dev/Ops team member"
+- id: ssh_key
+  type: textarea
+  attributes:
+    label: SSH public key
+    description: To access the systems
+    placeholder: |
+      ssh-rsa/ed25519/... ... john@leastauthority.com
+  validations:
+    required: false
+- id: gpg_key
+  type: textarea
+  attributes:
+    label: GPG public key
+    description: To decrypt the secrets
+    placeholder: |
+      -----BEGIN PGP PUBLIC KEY BLOCK-----
+      ...
+      -----END PGP PUBLIC KEY BLOCK-----
+  validations:
+    required: false
+- id: mention_team
+  type: input
+  attributes:
+    label: Mention team
+    description: Change only to mention an other team
+    value: "@la-test/sbx"
+  validations:
+    required: true
