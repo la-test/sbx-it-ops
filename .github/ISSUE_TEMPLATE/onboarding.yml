@@ -7,7 +7,8 @@ body:
   type: markdown
   attributes:
     value: |
-      ## Give it a proper title :arrow_up_small:, then fill the fields :arrow_down_small:
+      ## Give a proper title above :arrow_up_small:
+      ## Fill the following fields :arrow_down_small:
 - id: name
   type: input
   attributes:
