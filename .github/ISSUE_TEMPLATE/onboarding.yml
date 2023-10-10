@@ -16,22 +16,6 @@ body:
     placeholder: John Doe
   validations:
     required: true
-- id: prefered_username
-  type: input
-  attributes:
-    label: Prefered username
-    description: To be used when possible
-    placeholder: jdoe
-  validations:
-    required: false
-- id: github_username
-  type: input
-  attributes:
-    label: Existing Github username
-    description: To access the relevant repositories
-    placeholder: johndoe123
-  validations:
-    required: true
 - id: email
   type: input
   attributes:
@@ -47,15 +31,27 @@ body:
     placeholder: john@private.storage
   validations:
     required: false
-- id: devops
-  type: markdown
+- id: prefered_username
+  type: input
   attributes:
-    value: "## Fill the following fields only for Dev/Ops team member"
+    label: Prefered username
+    description: Only to be used where possible
+    placeholder: jdoe
+  validations:
+    required: false
+- id: github_username
+  type: input
+  attributes:
+    label: Existing Github username
+    description: Only to access repositories
+    placeholder: johndoe123
+  validations:
+    required: false
 - id: ssh_key
   type: textarea
   attributes:
     label: SSH public key
-    description: To access the systems
+    description: Only to access the systems
     placeholder: |
       ssh-rsa/ed25519/... ... john@leastauthority.com
   validations:
@@ -64,7 +60,7 @@ body:
   type: textarea
   attributes:
     label: GPG public key
-    description: To decrypt the secrets
+    description: Only to decrypt the secrets
     placeholder: |
       -----BEGIN PGP PUBLIC KEY BLOCK-----
       ...
@@ -75,7 +71,7 @@ body:
   type: input
   attributes:
     label: Mention team
-    description: Change only to mention an other team
+    description: Only change to mention an other team
     value: "@la-test/sbx"
   validations:
     required: true
