@@ -1,5 +1,5 @@
 name: Change request
-description: Request to move to a new state in a way that affects our products/services or their components
+description: Request a change of state which affects a service and its components
 title: "Deploy/Upgrade/Migrate/Sunset :question: on :question: before :question:"
 labels: ["change"]
 body:
