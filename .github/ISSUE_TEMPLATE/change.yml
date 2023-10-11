@@ -1,0 +1,94 @@
+name: Change request
+description: Request to move to a new state in a way that affects our products/services or their components
+title: "Deploy/Upgrade/Migrate/Sunset :question: on :question: before :question:"
+labels: ["change"]
+body:
+- id: header
+  type: markdown
+  attributes:
+    value: |
+      ## Give a proper title above :arrow_up_small:
+      ## Fill the following fields :arrow_down_small:
+- id: classification
+  type: dropdown
+  attributes:
+    label: Classification
+    description: |
+      Select the best tag(s) classifying this change
+      * Standard: straightforward and/or frequent
+      * Normal: important and/or with review
+      * Major: high risk and/or with detailed report
+      * Emergency: urgent and/or high risk of failure
+    multiple: true
+    options:
+      - Unknown/Todo later
+      - Standard
+      - Normal
+      - Major
+      - Emergency
+      - Deployment
+      - Upgrade
+      - Migration
+      - Sunset
+      - Already implemented
+  validations:
+    required: true
+- id: asis
+  type: textarea
+  attributes:
+    label: AsIs
+    description: Describe the current situation
+    placeholder: |
+      Alice version 0.1.x is deployed on staging and production
+  validations:
+    required: true
+- id: tobe
+  type: textarea
+  attributes:
+    label: ToBe
+    description: Describe the targeted situation
+    placeholder: |
+      Alice version 0.2.0 is deployed on staging and production
+  validations:
+    required: true
+- id: deadline
+  type: input
+  attributes:
+    label: Deadline
+    description: When should this changed be implemented at the latest
+    placeholder: "End of Q4"
+  validations:
+    required: true
+- id: reason
+  type: textarea
+  attributes:
+    label: Reason
+    description: Describe why this change is requested
+    placeholder: |
+      Bob team needs new features and some fixes from Alice version 0.2.0
+  validations:
+    required: true
+- id: risks
+  type: textarea
+  attributes:
+    label: Risks
+    description: Describe the effects if not implemented and/or what could go wrong while doing so
+    placeholder: |
+      * Bob team will not be able to work on Charlie's project w/o this change
+      * New version of Alice software tend to be unstable and buggy forcing us to recover from backup
+      * ...
+  validations:
+    required: true
+- id: mention_team
+  type: input
+  attributes:
+    label: Mention team
+    description: Only change to mention an other team
+    value: "@la-test/sbx"
+  validations:
+    required: true
+- id: footer
+  type: markdown
+  attributes:
+    value: |
+      ## Remember those answers can always be changed later :arrow_forward:
