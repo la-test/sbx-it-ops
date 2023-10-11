@@ -1,15 +1,16 @@
 ---
-name: Bug report
-about: Report a problem in existing functionality
+name: Problem or Bug report
+about: Report a problem in existing service or functionality
 title: ':question: is doing :question: rather than :question:'
 labels: bug
 ---
 
 <!--
 BEFORE SUBMITTING, please:
-1) Search if this issue has not been reported here before.
+1) Search if this has not been reported here before.
 2) Choose a proper title above.
-3) Delete any comment bloc such as this one.
+3) Follow the instructions in comment bloc such as this one.
+4) Delete those comment blocs.
 -->
 
 #### Description
