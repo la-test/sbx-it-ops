@@ -60,7 +60,7 @@ body:
   type: dropdown
   attributes:
     label: Classification
-    description: Select the tag(s) classifying this incident
+    description: Select the best tag(s) classifying this incident, if possible
     multiple: true
     options:
       - Unknown/Todo later
