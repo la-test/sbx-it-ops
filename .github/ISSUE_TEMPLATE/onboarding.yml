@@ -1,4 +1,4 @@
-name: "Onboarding or Offboarding - Form"
+name: "Onboarding or Offboarding request"
 description: "Request support for the onboarding or offboarding of a team member"
 title: "Onboarding or Offboarding of :question: as member of :question:"
 labels: ["access"]
@@ -75,3 +75,8 @@ body:
     value: "@la-test/sbx"
   validations:
     required: true
+- id: footer
+  type: markdown
+  attributes:
+    value: |
+      ## Remember those answers can always be changed later :arrow_forward:
