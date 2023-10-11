@@ -13,7 +13,9 @@ body:
   type: textarea
   attributes:
     label: Description
-    description: Describe in a few words what has been detected
+    description: |
+      Describe in a few words what has been detected
+      Please refer to the relevant [product](https://docs.latfa.net/engineering/latest/products/readme.html) or [service](https://docs.latfa.net/it-ops/latest/services/readme.html) if possible
     placeholder: |
       Service ... is not available and display this error message
        or
@@ -50,7 +52,7 @@ body:
   type: input
   attributes:
     label: Last time
-    description: When was the last time the incident was known to not be active, if relevant?
+    description: When was the last time that the observed effects were NOT yet visible, if relevant?
     placeholder: "YYYY/MM/DD HH:MM UTC"
   validations:
     required: false
