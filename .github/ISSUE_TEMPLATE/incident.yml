@@ -14,9 +14,7 @@ body:
   attributes:
     label: Reporter
     description: Who has reported this first, if not you?
-    placeholder: |
-      email@example.com
-      @la-test/sbx
+    placeholder: "email@example.com, @la-test/sbx"
   validations:
     required: false
 - id: reporting_time
@@ -24,7 +22,7 @@ body:
   attributes:
     label: Reporting time
     description: When was this reported first, if not now?
-    value: "DD/MM/YYY HH:MM"
+    placeholder: "YYYY/MM/DD HH:MM UTC"
   validations:
     required: false
 - id: detector
@@ -32,10 +30,7 @@ body:
   attributes:
     label: Detector
     description: Who or what has detected this for the first time?
-    placeholder: |
-      monitoring.example.com
-      email@example.com
-      @la-test/sbx
+    placeholder: "monitoring.example.com, email@example.com, @la-test/sbx"
   validations:
     required: true
 - id: detection_time
@@ -43,7 +38,7 @@ body:
   attributes:
     label: Detection time
     description: When was this detected for the first time?
-    value: "DD/MM/YYY HH:MM"
+    placeholder: "YYYY/MM/DD HH:MM UTC"
   validations:
     required: true
 - id: location
@@ -96,7 +91,7 @@ body:
       Bob and the client have been informed
   validations:
     required: false
-- id: mentionr_team
+- id: mention_team
   type: input
   attributes:
     label: Mention team
@@ -104,3 +99,8 @@ body:
     value: "@la-test/sbx"
   validations:
     required: true
+- id: footer
+  type: markdown
+  attributes:
+    value: |
+      ## Remember those answers can always be changed later :arrow_forward:
