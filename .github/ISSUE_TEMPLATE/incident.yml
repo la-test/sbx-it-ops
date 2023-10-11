@@ -1,4 +1,4 @@
-name: Incident report - Form
+name: Incident report
 description: Report an incident with potential or lasting disruption or damage on our products/services or their components
 title: ":question: is unavailable since :question:"
 labels: ["incident"]
