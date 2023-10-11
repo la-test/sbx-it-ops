@@ -1,5 +1,5 @@
 name: Incident report - Form
-description: Report an incident with potential or lasting impact on a product or service
+description: Report an incident with potential or lasting impact on our products/services or their components
 title: ":question: is unavailable since :question:"
 labels: ["incident"]
 body:
