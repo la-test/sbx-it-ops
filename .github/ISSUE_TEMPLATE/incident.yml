@@ -1,0 +1,106 @@
+name: Incident report - Form
+description: Report an incident with potential or lasting impact on a product or service
+title: ":question: is unavailable since :question:"
+labels: ["incident"]
+body:
+- id: header
+  type: markdown
+  attributes:
+    value: |
+      ## Give a proper title above :arrow_up_small:
+      ## Fill the following fields :arrow_down_small:
+- id: reporter
+  type: input
+  attributes:
+    label: Reporter
+    description: Who has reported this first, if not you?
+    placeholder: |
+      email@example.com
+      @la-test/sbx
+  validations:
+    required: false
+- id: reporting_time
+  type: input
+  attributes:
+    label: Reporting time
+    description: When was this reported first, if not now?
+    value: "DD/MM/YYY HH:MM"
+  validations:
+    required: false
+- id: detector
+  type: input
+  attributes:
+    label: Detector
+    description: Who or what has detected this for the first time?
+    placeholder: |
+      monitoring.example.com
+      email@example.com
+      @la-test/sbx
+  validations:
+    required: true
+- id: detection_time
+  type: input
+  attributes:
+    label: Detection time
+    description: When was this detected for the first time?
+    value: "DD/MM/YYY HH:MM"
+  validations:
+    required: true
+- id: location
+  type: dropdown
+  attributes:
+    label: Location
+    description: Where did this happened?
+    multiple: true
+    options:
+      - Unknown
+      - Third-party datacenter
+      - Berlin headquarter
+      - Remote workplace
+  validations:
+    required: true
+- id: type
+  type: dropdown
+  attributes:
+    label: Type
+    description: Select the type(s) of incident you think this is
+    multiple: true
+    options:
+      - Unknown
+      - Availability
+      - Confidentiality
+      - Integrity
+      - Other
+  validations:
+    required: true
+- id: description
+  type: textarea
+  attributes:
+    label: Description
+    description: Describe in a few words what has been detected
+    placeholder: |
+      Service ... is not available and display this error message
+       or
+      Secret ... have been found on ... where they should not be
+       or
+      Data ... have been transfert to ... but seem to be corrupted
+  validations:
+    required: true
+- id: other_parties
+  type: textarea
+  attributes:
+    label: Other parties
+    description: Describe who else has been involved in this incident
+    placeholder: |
+      Alice was present when I have detected the incident for the first time
+      Bob and the client have been informed
+  validations:
+    required: false
+- id: mentionr_team
+  type: input
+  attributes:
+    label: Mention team
+    description: Only change to mention an other team
+    value: "@la-test/sbx"
+  validations:
+    required: true

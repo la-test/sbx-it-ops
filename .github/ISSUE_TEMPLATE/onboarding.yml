@@ -1,6 +1,6 @@
 name: "Onboarding or Offboarding - Form"
-description: "Request support for the onboarding or offboarding of a team member (using a form)"
-title: "[Onboarding or Offboarding]: <... as ... member>"
+description: "Request support for the onboarding or offboarding of a team member"
+title: "Onboarding or Offboarding of :question: as member of :question:"
 labels: ["access"]
 body:
 - id: common
