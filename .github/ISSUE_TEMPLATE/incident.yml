@@ -1,4 +1,4 @@
-name: Incident report
+name: Incident report - Form
 description: Report an incident with potential or lasting impact on a product or service
 title: ":question: is unavailable since :question:"
 labels: ["incident"]
@@ -19,7 +19,7 @@ body:
       @la-test/sbx
   validations:
     required: false
-- id: reporting-time
+- id: reporting_time
   type: input
   attributes:
     label: Reporting time
@@ -27,7 +27,7 @@ body:
     value: "DD/MM/YYY HH:MM"
   validations:
     required: false
-- id: detection-contact
+- id: detector
   type: input
   attributes:
     label: Detector
@@ -38,7 +38,7 @@ body:
       @la-test/sbx
   validations:
     required: true
-- id: detection-time
+- id: detection_time
   type: input
   attributes:
     label: Detection time
@@ -86,7 +86,7 @@ body:
       Data ... have been transfert to ... but seem to be corrupted
   validations:
     required: true
-- id: other-parties
+- id: other_parties
   type: textarea
   attributes:
     label: Other parties
@@ -96,3 +96,11 @@ body:
       Bob and the client have been informed
   validations:
     required: false
+- id: mentionr_team
+  type: input
+  attributes:
+    label: Mention team
+    description: Only change to mention an other team
+    value: "@la-test/sbx"
+  validations:
+    required: true
