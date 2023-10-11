@@ -1,19 +1,20 @@
 ---
-name: Feature request
-about: Suggest a new feature or an improvement of existing functionality
+name: Service or Feature request
+about: Request a new service/feature or an improvement of existing functionality
 title: ':question: would be useful for :question:'
 labels: enhancement
 ---
 
 <!--
 BEFORE SUBMITTING, please:
-1) Search if this feature has not been requested here before.
+1) Search if this has not been requested here before.
 2) Choose a proper title above.
-3) Delete any comment bloc such as this one.
+3) Follow the instructions in comment bloc such as this one.
+4) Delete those comment blocs.
 -->
 
 #### Description
-<!-- Describe the problem this feature/improvement is addressing, and the solution you'd like -->
+<!-- Describe the requirement/problem this new service/feature/improvement is addressing, and the solution you'd like -->
 
 #### Motivation
 <!-- Describe why it is needed: the value to a user, and who that user might be -->
