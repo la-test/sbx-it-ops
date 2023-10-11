@@ -1,7 +1,7 @@
 ---
 name: Incident report
 about: Report an incident with potential or lasting impact on a product or service
-title: '[Incident]: <... is unavailable since ...>'
+title: ':question: is unavailable since :question:'
 labels: incident
 assignees: 'la-test/sbx'
 

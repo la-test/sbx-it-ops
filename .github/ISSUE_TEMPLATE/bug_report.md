@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report a problem in existing functionality
-title: '<... is doing ... rather than ...>'
+title: ':question: is doing :question: rather than :question:'
 labels: bug
 ---
 

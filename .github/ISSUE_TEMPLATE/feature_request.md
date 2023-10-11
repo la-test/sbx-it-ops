@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest a new feature or an improvement of existing functionality
-title: '<... would be useful for ...>'
+title: ':question: would be useful for :question:'
 labels: enhancement
 ---
 
