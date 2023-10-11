@@ -15,10 +15,10 @@ body:
     label: Classification
     description: |
       Select the best tag(s) classifying this change
-      * Standard: straightforward and/or frequent
-      * Normal: important and/or with review
-      * Major: high risk and/or with detailed report
-      * Emergency: urgent and/or high risk of failure
+      Standard = straightforward and/or frequent
+      Normal = important and/or with review
+      Major = high risk and/or with detailed report
+      Emergency = urgent and/or high risk of failure
     multiple: true
     options:
       - Unknown/Todo later
