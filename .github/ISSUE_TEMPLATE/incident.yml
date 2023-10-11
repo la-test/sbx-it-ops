@@ -9,22 +9,21 @@ body:
     value: |
       ## Give a proper title above :arrow_up_small:
       ## Fill the following fields :arrow_down_small:
-- id: reporter
-  type: input
+- id: description
+  type: textarea
   attributes:
-    label: Reporter
-    description: Who has reported this first, if not you?
-    placeholder: "email@example.com, @la-test/sbx"
+    label: Description
+    description: |
+      Describe in a few words what has been detected
+      Please refer to the relevant [product](https://docs.latfa.net/engineering/latest/products/readme.html) or [service](https://docs.latfa.net/it-ops/latest/services/readme.html) if possible
+    placeholder: |
+      Service ... is not available and display this error message
+       or
+      Secret ... have been found on ... where they should not be
+       or
+      Data ... have been transfert to ... but seem to be corrupted
   validations:
-    required: false
-- id: reporting_time
-  type: input
-  attributes:
-    label: Reporting time
-    description: When was this reported first, if not now?
-    placeholder: "YYYY/MM/DD HH:MM UTC"
-  validations:
-    required: false
+    required: true
 - id: detector
   type: input
   attributes:
@@ -41,6 +40,39 @@ body:
     placeholder: "YYYY/MM/DD HH:MM UTC"
   validations:
     required: true
+- id: reporting_time
+  type: input
+  attributes:
+    label: Reporting time
+    description: When was this reported first elsewhere, if not here now?
+    placeholder: "YYYY/MM/DD HH:MM UTC"
+  validations:
+    required: false
+- id: last_time
+  type: input
+  attributes:
+    label: Last time
+    description: When was the last time that the observed effects were NOT yet visible, if relevant?
+    placeholder: "YYYY/MM/DD HH:MM UTC"
+  validations:
+    required: false
+- id: classification
+  type: dropdown
+  attributes:
+    label: Classification
+    description: Select the best tag(s) classifying this incident, if possible
+    multiple: true
+    options:
+      - Unknown/Todo later
+      - Showstopper
+      - Availability
+      - Confidentiality
+      - Integrity
+      - Permanent
+      - Intermittent
+      - Already resolved
+  validations:
+    required: true
 - id: location
   type: dropdown
   attributes:
@@ -48,47 +80,21 @@ body:
     description: Where did this happened?
     multiple: true
     options:
-      - Unknown
+      - Unknown/Todo later
       - Third-party datacenter
       - Berlin headquarter
       - Remote workplace
-  validations:
-    required: true
-- id: type
-  type: dropdown
-  attributes:
-    label: Type
-    description: Select the type(s) of incident you think this is
-    multiple: true
-    options:
-      - Unknown
-      - Availability
-      - Confidentiality
-      - Integrity
-      - Other
-  validations:
-    required: true
-- id: description
-  type: textarea
-  attributes:
-    label: Description
-    description: Describe in a few words what has been detected
-    placeholder: |
-      Service ... is not available and display this error message
-       or
-      Secret ... have been found on ... where they should not be
-       or
-      Data ... have been transfert to ... but seem to be corrupted
   validations:
     required: true
 - id: other_parties
   type: textarea
   attributes:
     label: Other parties
-    description: Describe who else has been involved in this incident
+    description: Describe who else has been involved in this incident and when
     placeholder: |
-      Alice was present when I have detected the incident for the first time
-      Bob and the client have been informed
+      Alice has reported this first in the chat earlier today at HH:MM UTC.
+      Bob helped me filling up this issue
+      Charlie has been informed and will notified the client by email later today
   validations:
     required: false
 - id: mention_team
